@@ -20,6 +20,10 @@ public class DockerLogsIngestor implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        producer.start("prfpnt_kafka1_1");
+        producer.start("zookeeper");
+        producer.start("kafka1");
+        producer.start("kafdrop");
+        producer.start("elastic1");
+        producer.start("kibana");
     }
 }
